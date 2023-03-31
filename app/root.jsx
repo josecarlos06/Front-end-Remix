@@ -1,5 +1,8 @@
-import {Meta,Links, Outlet} from '@remix-run/react';
-import styles from './styles/app.css';
+import 
+{Meta,Links, Outlet, Scripts, LiveReload} 
+from '@remix-run/react';
+import Header from '~/components/Header';
+import styles from '~/styles/app.css';
 // cargar head
 export function meta(){
    return(
@@ -30,6 +33,10 @@ export function links(){
          href:'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap',
          rel:'stylesheet'
       },
+      {
+         href:'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
+         rel:'stylesheet'
+      },
       {   
          rel :'stylesheet',
          href: styles
@@ -52,7 +59,10 @@ function Document({children}){
             <Links/>
          </head>
          <body>
+            <Header/>
             {children}
+            <Scripts/>
+            <LiveReload/>
          </body>
       </html>
    )
