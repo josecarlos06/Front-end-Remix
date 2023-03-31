@@ -1,6 +1,6 @@
-import {Meta,Links} from '@remix-run/react';
+import {Meta,Links, Outlet} from '@remix-run/react';
 import styles from './styles/app.css';
-
+// cargar head
 export function meta(){
    return(
       {
@@ -10,9 +10,26 @@ export function meta(){
       }
    )
 }
-
+// cargar link css
 export function links(){
    return[
+      {   
+         rel :'stylesheet',
+         href: 'https://necolas.github.io/normalize.css/8.0.1/normalize.css'
+      },
+      {
+         rel : 'preconnect',
+         href:'https://fonts.googleapis.com'
+      },
+      {
+         rel: 'preconnect',
+         href: 'https://fonts.gstatic.com',
+         crossOrigin:'true'
+      },
+      {
+         href:'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap',
+         rel:'stylesheet'
+      },
       {   
          rel :'stylesheet',
          href: styles
@@ -23,7 +40,7 @@ export function links(){
 export default function App(){
    return(
       <Document>
-         <h1>From the App 🥵</h1>
+         <Outlet/>
       </Document>
    )
 }
