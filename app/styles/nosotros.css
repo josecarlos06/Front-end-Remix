@@ -1,0 +1,12 @@
+.nosotros__content {
+   display: grid;
+   align-items: center;
+   gap: 4rem;
+   margin:5rem 0;
+}
+
+@media(min-width:768px) {
+   .nosotros__content {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
