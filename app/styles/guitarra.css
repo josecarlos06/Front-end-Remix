@@ -1,3 +1,12 @@
+.url__guitarra{
+   display: grid;
+   place-items:center;
+   margin:5rem auto;
+   max-width:90rem;
+}
+.url__figure{
+   width:20rem;
+}
 .guitarra__grid{
    display: grid;
    gap:4rem;
@@ -59,12 +68,23 @@
    background:white;
    opacity:.3;
 }
+.shop{
+   display: block;
+   background:var(--black);
+   color:var(--white);
+   padding:1rem 3rem;
+   border-radius:.2rem;
+   border: none;
+}
 @media(min-width:768px){
    .guitarra__grid{
       grid-template-columns:repeat(2,1fr);
    }
    .price{
       font-size:4rem;
+   }
+   .url__guitarra{
+      grid-template-columns:repeat(2,1fr);
    }
 }
 @media(min-width:968px){

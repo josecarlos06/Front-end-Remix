@@ -1,4 +1,3 @@
-// import { useLoaderData } from "@remix-run/react";
 import { useLoaderData } from "@remix-run/react";
 import { getData } from "~/services/api.server";
 import Guitarra from "../components/Guitarra";
@@ -11,7 +10,7 @@ export async function loader(){
 export function meta(){
    return{
       title : 'GuitaLA - Tienda Guitarra',
-      description : 'GuitaLa Nuestra coleccion de guitarras'
+      description : 'GuitaLa Nuestra colección de guitarras'
    }
 }
 export function links(){
