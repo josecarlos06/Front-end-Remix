@@ -1,6 +1,5 @@
 import {useLoaderData} from "@remix-run/react";
-import { UniqueData } from "../../services/api.server";
-import style from '../../styles/guitarra.css';
+import { UniqueData } from "~/services/api.server";
 
 export async function loader({params}){
    const {url} = params
@@ -24,20 +23,12 @@ export function meta({data}){
       title : `GuitaLA - ${data.data[0].attributes.nombre}`
    }
 }
-export function links(){
-   return[
-      {
-         rel : 'stylesheet',
-         href : style
-      }
-   ]
-}
 
 const Url = () => {
    const data = useLoaderData()
    const {nombre,descripcion, precio, imagen} = data.data[0].attributes;
   return (
-   <main className="container url__guitarra">
+   <div className="url__guitarra">
       <figure className="url__figure">
          <img src={imagen.data.attributes.url} alt="" />
       </figure>
@@ -51,7 +42,7 @@ const Url = () => {
          </select> */}
          <button className="shop"> Agregar al Carrito</button>
       </div>
-   </main>
+   </div>
   )
 }
 

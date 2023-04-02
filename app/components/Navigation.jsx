@@ -10,13 +10,12 @@ const Navigation = () => {
             <Link to="/nosotros" className={location.pathname === '/nosotros' ? 'nav__active' : ''}>Nosotros</Link>
          </li>
          <li className="navbar__li">
-            <Link to="/tienda" className={location.pathname === '/tienda' ? 'nav__active' : ''}>Tienda</Link>
+            <Link to="/guitarras" className={location.pathname === '/guitarras' ? 'nav__active' : ''}>Tienda</Link>
          </li>
          <li className="navbar__li">
-            <Link to="/blog" className={location.pathname === '/blog' ? 'nav__active' : ''}>Blog</Link>
+            <Link to="/posts" className={location.pathname === '/posts' ? 'nav__active' : ''}>Blog</Link>
          </li>
       </>
    )
 }
-
 export default Navigation

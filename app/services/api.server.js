@@ -37,3 +37,13 @@ export const uniquePost = async (url)=>{
       console.log("Error");
    }
 }
+
+export const getCurso = async ()=>{
+   try{     
+      const res = await fetch(`${process.env.API_URL}/curso?populate=imagen`);
+      const data = await res.json();
+      return data;
+   }catch(erro){
+      console.log("Error");
+   }
+}

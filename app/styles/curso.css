@@ -1,0 +1,24 @@
+.curso{
+   width:100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding:10rem 0;
+   text-align: center;
+}
+.content__cursos .heading{
+   font-size:3rem;
+   margin:2rem 0;
+}
+.content__cursos .paragraph{
+   color:var(--white);
+}
+
+@media(min-width:768px){
+   .content__cursos .heading{
+      font-size:5rem;
+   }
+   .content__cursos .paragraph{
+      font-size:2rem;
+   } 
+}
