@@ -53,7 +53,26 @@
    border-radius:.2rem;
    position: relative;
 }
-.enlace::after{
+.cantidad{
+   width:100%;
+   margin:1rem 0 2rem 0;
+   text-align: center;
+   cursor: pointer;
+   padding:1rem 0;
+}
+.shop{
+   display: block;
+   background:var(--black);
+   color:var(--white);
+   padding:1.5rem 3rem;
+   border-radius:.2rem;
+   border: none;
+   width:100%;
+   text-align: center;
+   cursor: pointer;
+   position: relative;
+}
+.enlace::after, .shop::after{
    content: '';
    position: absolute;
    width:100%;
@@ -63,18 +82,10 @@
    clip-path: circle(0.5% at 0 0);
    transition: clip-path .4s;
 }
-.enlace:hover::after{
+.enlace:hover::after, .shop:hover::after{
    clip-path: circle(140.9% at 0 0);
    background:white;
    opacity:.3;
-}
-.shop{
-   display: block;
-   background:var(--black);
-   color:var(--white);
-   padding:1rem 3rem;
-   border-radius:.2rem;
-   border: none;
 }
 @media(min-width:768px){
    .guitarra__grid{
@@ -85,6 +96,9 @@
    }
    .url__guitarra{
       grid-template-columns:repeat(2,1fr);
+   }
+   .shop{
+      width: auto;
    }
 }
 @media(min-width:968px){

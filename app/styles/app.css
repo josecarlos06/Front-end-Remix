@@ -127,6 +127,9 @@ main {
    align-items: center;
    gap: 2rem;
 }
+.nav__footer .navbar__li:last-child{
+   display: none;
+}
 
 .copyright {
    color: white;

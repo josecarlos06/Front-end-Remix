@@ -15,6 +15,11 @@ const Navigation = () => {
          <li className="navbar__li">
             <Link to="/posts" className={location.pathname === '/posts' ? 'nav__active' : ''}>Blog</Link>
          </li>
+         <li className="navbar__li">
+            <Link to="/carrito" className={location.pathname === '/carrito' ? 'nav__active' : ''}>
+               <i className='bx bx-cart-add'></i>
+            </Link>
+         </li>
       </>
    )
 }

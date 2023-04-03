@@ -1,0 +1,16 @@
+.content{
+   display: grid;
+   align-items: center;
+   gap:2rem;
+}
+.resumen{
+   background:#f9fafb;
+   padding:2rem;
+   border-radius:.5rem;
+}
+
+@media(min-width:768px){
+   .content{
+      grid-template-columns:repeat(2,1fr);
+   }
+}

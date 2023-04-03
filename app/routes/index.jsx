@@ -38,7 +38,6 @@ export async function loader() {
 }
 const Index = () => {
    const {guitarras, curso ,posts} = useLoaderData();
-   console.log(curso.attributes);
   return (
     <>
          <main className="container">
