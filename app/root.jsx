@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Meta, Links, Outlet, Scripts, LiveReload, useCatch }
    from '@remix-run/react';
 import Header from '~/components/Header';
@@ -45,9 +46,30 @@ export function links() {
 }
 
 export default function App() {
+   const [carrito, setCarrito] = useState([]);
+   const agregarCarrito = (guitarra)=>{
+      setCarrito([...carrito, guitarra])
+
+      if(carrito.some( guitarraState => guitarraState.id === guitarra.id)){
+         const carritoActu = carrito.map( guitarraState => {
+            if(guitarraState.id === guitarra.id){
+               guitarraState.cantidad /* + */ =  guitarra.cantidad;
+            }
+            return guitarraState;
+         })
+         setCarrito(carritoActu)
+      }else{
+         setCarrito([...carrito, guitarra])
+      }
+   }
    return (
       <Document>
-         <Outlet />
+         <Outlet 
+            context={{
+               agregarCarrito,
+               carrito
+            }}
+         />
       </Document>
    )
 }
@@ -68,6 +90,8 @@ function Document({ children }) {
       </html>
    )
 }
+
+// recuperar errores
 
 export function CatchBoundary(){
    const error = useCatch();

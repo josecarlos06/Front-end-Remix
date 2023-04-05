@@ -34,6 +34,7 @@ export async function loader() {
       getCurso(),
       getPost(),
    ])
+   // retorna y accedo : 
    return {guitarras: guitarras.data, curso: curso.data ,posts: posts.data}
 }
 const Index = () => {

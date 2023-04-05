@@ -1,4 +1,6 @@
+import { useOutletContext } from "@remix-run/react"
 import carrito from "~/styles/carrito.css"
+import ArticulosCarrito from "../components/ArticulosCarrito"
 export function meta(){
    return{
       title : 'Carrito de compras'
@@ -13,6 +15,8 @@ export function links() {
    ]
 }
 const Carrito = () => {
+   const {carrito} = useOutletContext();
+   console.log(carrito);
    return (
       <main>
          <div className="container">
@@ -20,7 +24,14 @@ const Carrito = () => {
             <div className="content">
 
                <div className="carrito">
-                  <h2>Articulos</h2>
+                  {carrito.length === 0 ? <p>Sin elementos</p> : (
+                     carrito?.map(articulo =>(
+                        <ArticulosCarrito
+                           key={articulo.id}
+                           articulo = {articulo}
+                        />
+                     ))
+                  )}
                </div>
 
                <aside className="resumen">
