@@ -45,6 +45,9 @@
    padding:.5rem;
    border-radius: .2rem;
 }
+.fall-center{
+   text-align: center;
+}
 @media(min-width:768px){
    .content{
       grid-template-columns:repeat(2,1fr);

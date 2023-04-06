@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Meta, Links, Outlet, Scripts, LiveReload, useCatch }
    from '@remix-run/react';
 import Header from '~/components/Header';
@@ -46,7 +46,14 @@ export function links() {
 }
 
 export default function App() {
-   const [carrito, setCarrito] = useState([]);
+   const carritoLs = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('carrito')) ?? [] : null;
+
+   const [carrito, setCarrito] = useState(carritoLs);
+
+   useEffect(()=>{
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+   },[carrito]);
+
    const agregarCarrito = guitarra =>{
       setCarrito([...carrito, guitarra])
 
