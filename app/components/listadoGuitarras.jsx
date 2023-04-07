@@ -1,4 +1,4 @@
-import Guitarra from "~/components/guitarra"
+import Guitarra from "./guitarra"
 
 const ListadoGuitarras = ({guitarras}) => {
   return (
