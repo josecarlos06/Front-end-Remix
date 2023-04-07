@@ -4,7 +4,7 @@ import { UniqueData } from "~/services/api.server";
 
 export async function loader({params}){
    const {url} = params
-   const data = await UniqueData("posts",url)
+   const data = await UniqueData("guitarras",url)
    if(data.data.length === 0){
       throw new Response('',{
          status : 404,
