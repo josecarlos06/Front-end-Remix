@@ -1,4 +1,4 @@
-import Guitarra from "./guitarra"
+import GuitarLa from "./guitarLa"
 
 const ListadoGuitarras = ({guitarras}) => {
   return (
@@ -7,10 +7,11 @@ const ListadoGuitarras = ({guitarras}) => {
       {guitarras?.length && (
          <div className="guitarra__grid">
             {guitarras.map( guitarra => (
-               <Guitarra
+               <GuitarLa
                   key = {guitarra?.id}
                   guitarra = {guitarra?.attributes}
                />
+
             ))}
          </div>
       )}

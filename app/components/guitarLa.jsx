@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-const Guitarra = ({guitarra}) => {
+const GuitarLa = ({guitarra}) => {
   const {imagen, nombre,precio, descripcion, url} = guitarra
   return (
     <div className="item__guitarra">
@@ -17,4 +17,4 @@ const Guitarra = ({guitarra}) => {
   )
 }
 
-export default Guitarra
+export default GuitarLa

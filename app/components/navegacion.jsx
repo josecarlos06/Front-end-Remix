@@ -1,5 +1,5 @@
 import {Link, useLocation} from "@remix-run/react";
-const Navigation = () => {
+const Navegacion = () => {
    const location = useLocation();
    return (
       <>
@@ -23,4 +23,4 @@ const Navigation = () => {
       </>
    )
 }
-export default Navigation
+export default Navegacion

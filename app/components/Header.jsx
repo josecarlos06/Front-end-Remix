@@ -1,7 +1,8 @@
 import {Link} from "@remix-run/react";
 import { useState } from "react";
 import logo from '../../public/img/logo.svg';
-import Navigation from "./navigation"
+import Navegacion from "./navegacion";
+
 
 const Header = () => {
    const [toggle, setToggle] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
                </figure>
             </Link>
             <ul className={`${toggle ? 'active' : ''} navbar__ul`}>
-               <Navigation/>
+               <Navegacion/>
                <div 
                   onClick={()=> setToggle(false)}
                   className="toggle-Close">
