@@ -1,5 +1,5 @@
 import { useLoaderData } from "@remix-run/react"
-import { getData} from "~/services/api.server"
+import { getData, getPost,getCurso } from "~/services/api.server"
 import ListadoGuitarras from "~/components/listadoGuitarras"
 import ListadoPosts from "~/components/listadoPosts"
 import Banner from "~/components/banner"
@@ -7,6 +7,11 @@ import tienda from "~/styles/guitarra.css"
 import blog from "~/styles/blog.css"
 import curso from "~/styles/curso.css"
 
+export function meta(){
+   return{
+
+   }
+}
 export function links(){
    return[
       {
@@ -25,9 +30,9 @@ export function links(){
 }
 export async function loader() {
    const [guitarras,curso,posts] = await Promise.all([
-      getData("guitarras"),
-      getData("posts"),
-      getData("cursos"),
+      getData(),
+      getCurso(),
+      getPost(),
    ])
    // retorna y accedo : 
    return {guitarras: guitarras.data, curso: curso.data ,posts: posts.data}

@@ -1,9 +1,9 @@
 import { useLoaderData } from "@remix-run/react";
+import { getPost } from "~/services/api.server"
 import ListadoPosts from "~/components/listadoPosts";
-import { getData } from "../../services/api.server";
 
 export async function loader(){
-   const data = await getData("posts");
+   const data = await getPost();
    return data.data;  
 }
 export function meta() {
