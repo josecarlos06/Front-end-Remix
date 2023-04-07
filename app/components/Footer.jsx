@@ -1,5 +1,4 @@
-import Navigation from "./navigation"
-
+import Navigation from "~/components/navigation"
 const Footer = () => {
   return (
       <footer className="footer">

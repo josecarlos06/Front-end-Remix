@@ -1,7 +1,7 @@
 import {Link} from "@remix-run/react";
 import { useState } from "react";
 import logo from '../../public/img/logo.svg';
-import Navigation from "./navigation";
+import Navigation from "~/components/navigation"
 
 const Header = () => {
    const [toggle, setToggle] = useState(false);
