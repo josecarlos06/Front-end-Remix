@@ -1,11 +1,11 @@
 import { useLoaderData } from "@remix-run/react"
 import { getData, getPost,getCurso } from "~/services/api.server"
-import ListadoGuitarras from "../components/ListadoGuitarras"
-import ListadoPosts from "../components/listadoPosts"
-import Banner from "../components/Banner"
-import tienda from "../styles/guitarra.css"
-import blog from "../styles/blog.css"
-import curso from "../styles/curso.css"
+import ListadoGuitarras from "~/components/listadoGuitarras"
+import ListadoPosts from "~/components/listadoPosts"
+import Banner from "~/components/banner"
+import tienda from "~/styles/guitarra.css"
+import blog from "~/styles/blog.css"
+import curso from "~/styles/curso.css"
 
 export function meta(){
    return{

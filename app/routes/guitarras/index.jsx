@@ -1,6 +1,6 @@
 import { useLoaderData } from "@remix-run/react";
 import { getData } from "~/services/api.server";
-import ListadoGuitarras from "~/components/ListadoGuitarras";
+import ListadoGuitarras from "~/components/listadoGuitarras";
 
 export async function loader(){
    const data = await getData();

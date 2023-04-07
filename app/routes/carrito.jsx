@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useOutletContext } from "@remix-run/react";
 import { ClientOnly } from "remix-utils";
 import carrito from "~/styles/carrito.css"
-import ArticulosCarrito from "../components/ArticulosCarrito"
+import ArticulosCarrito from "../components/articulosCarrito"
+
 export function meta() {
    return {
       title: 'Carrito de compras'
