@@ -4,7 +4,7 @@ import { formatDate } from '~/utils/helpers';
 
 export async function loader({ params }) {
    const { url } = params;
-   const data = await uniquePost(url);
+   const data = await UniqueData("posts",url);
    if (data.data.length === 0) {
       throw new Response('', {
          status: 404,

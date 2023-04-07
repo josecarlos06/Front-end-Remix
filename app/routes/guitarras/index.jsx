@@ -3,7 +3,7 @@ import { getData } from "~/services/api.server";
 import ListadoGuitarras from "~/components/listadoGuitarras";
 
 export async function loader(){
-   const data = await getData();
+   const data = await getData("guitarras");
    return data.data;
 }
 export function meta(){

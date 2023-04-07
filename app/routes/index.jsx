@@ -7,11 +7,6 @@ import tienda from "~/styles/guitarra.css"
 import blog from "~/styles/blog.css"
 import curso from "~/styles/curso.css"
 
-export function meta(){
-   return{
-
-   }
-}
 export function links(){
    return[
       {
@@ -30,9 +25,9 @@ export function links(){
 }
 export async function loader() {
    const [guitarras,curso,posts] = await Promise.all([
-      getData(),
-      getCurso(),
-      getPost(),
+      getData("guitarras"),
+      getData("posts"),
+      getData("cursos"),
    ])
    // retorna y accedo : 
    return {guitarras: guitarras.data, curso: curso.data ,posts: posts.data}

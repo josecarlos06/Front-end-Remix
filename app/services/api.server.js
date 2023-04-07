@@ -1,6 +1,6 @@
-export const getData = async ()=>{
+export const getData = async (type)=>{
    try{     
-      const res = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`);
+      const res = await fetch(`${process.env.API_URL}/${type}?populate=imagen`);
       const data = await res.json();
       return data;
    }catch(erro){
@@ -8,42 +8,12 @@ export const getData = async ()=>{
    }
 }
 
-export const UniqueData = async (url) => {
+export const UniqueData = async (type,url) => {
    try{
-      const res = await fetch(`${process.env.API_URL}/guitarras?filters[url]=${url}&populate=imagen`)
+      const res = await fetch(`${process.env.API_URL}/${type}?filters[url]=${url}&populate=imagen`)
       const data = await res.json();
       return data;
    }catch(err){
       console.log(err);
-   }
-}
-
-export const getPost = async ()=>{
-   try{     
-      const res = await fetch(`${process.env.API_URL}/posts?populate=imagen`);
-      const data = await res.json();
-      return data;
-   }catch(erro){
-      console.log("Error");
-   }
-}
-
-export const uniquePost = async (url)=>{
-   try{     
-      const res = await fetch(`${process.env.API_URL}/posts?filters[url]=${url}&populate=imagen`);
-      const data = await res.json();
-      return data;
-   }catch(erro){
-      console.log("Error");
-   }
-}
-
-export const getCurso = async ()=>{
-   try{     
-      const res = await fetch(`${process.env.API_URL}/curso?populate=imagen`);
-      const data = await res.json();
-      return data;
-   }catch(erro){
-      console.log("Error");
    }
 }

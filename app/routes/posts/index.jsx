@@ -3,7 +3,7 @@ import { getPost } from "~/services/api.server"
 import ListadoPosts from "~/components/listadoPosts";
 
 export async function loader(){
-   const data = await getPost();
+   const data = await getData("posts");
    return data.data;  
 }
 export function meta() {
