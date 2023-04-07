@@ -1,6 +1,6 @@
-import { uniquePost } from '~/services/api.server';
 import { useLoaderData } from '@remix-run/react';
 import { formatDate } from '~/utils/helpers';
+import { UniqueData } from '../../services/api.server';
 
 export async function loader({ params }) {
    const { url } = params;

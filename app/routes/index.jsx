@@ -1,5 +1,5 @@
 import { useLoaderData } from "@remix-run/react"
-import { getData, getPost,getCurso } from "~/services/api.server"
+import { getData} from "~/services/api.server"
 import ListadoGuitarras from "~/components/listadoGuitarras"
 import ListadoPosts from "~/components/listadoPosts"
 import Banner from "~/components/banner"
